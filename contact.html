@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content />
+        <meta name="author" content />
+        <title>Eremeev Bogdan</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/1.ico" />
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
+    </head>
+    <body class="d-flex flex-column">
+        <style>
+            body{
+                font-family: "LXGW WenKai Mono TC", monospace;
+                font-weight: 400;
+                font-style: normal;
+            }
+        </style>
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-light">Портфолио</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Домой</a></li>
+                            <li class="nav-item"><a class="nav-link" href="resume.html">Резюме</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html">Проекты</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Связаться</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page content-->
+            <section class="py-5">
+                <div class="container px-5">
+                    <!-- Contact form-->
+                    <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+                        <div class="text-center mb-5">
+                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                            <h1 class="fw-bolder">Связаться</h1>
+                            <p class="lead fw-normal text-muted mb-0">Давайте работать вместе!</p>
+                        </div>
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                                <!-- to get an API token!-->
+                                <form id="orderForm">
+                                  <div class="row">
+                                    <div class="col-md-4 form-group">
+                                      <input type="text" name="name" class="form-control" id="name" placeholder="Имя" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                                      <div class="validate"></div>
+                                    </div>
+                                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                                      <input type="email" class="form-control" name="email" id="email" placeholder="Почта" data-rule="email" data-msg="Please enter a valid email">
+                                      <div class="validate"></div>
+                                    </div>
+                                    <div class="col-md-4 form-group mt-3 mt-md-0">
+                                      <input type="tel" class="form-control" name="phone" id="phone" placeholder="Номер телефона" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                                      <div class="validate"></div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group mt-3">
+                                    <textarea class="form-control" name="message" rows="5" placeholder="Текст обращения"></textarea>
+                                    <div class="validate"></div>
+                                  </div>
+                                  <div class="text-center"><button class="btn btn-primary mt-5" type="submit">Отправить сообщение</button></div>
+                                </form>
+                                <script>
+                                    document.getElementById("orderForm").addEventListener("submit", function(event) {
+                                        event.preventDefault(); // Prevent the default form submission
+                              
+                                        // Fetch form data
+                                        const formData = new FormData(event.target);
+                                        // console.log(formData)
+                                        // Prepare message to be sent to Telegram
+                                        let message = `
+Имя: ${formData.get('name')}
+Телефон: ${formData.get('phone')}
+Email: ${formData.get('email')}
+Сообщение: ${formData.get('message')}
+                                        `;
+                                        
+                                        // Check if comment is provided, otherwise set a default one
+                                        // const comment = formData.get('message');
+                                        // if (comment.trim() !== '') {
+                                        //   message += `\n📝 : ${comment}`;
+                                        // } else {
+                                        //   message += "\n📝 : [No message]";
+                                        // }
+                                        
+                                        // Your Telegram Bot API token
+                                        const token = '7189781902:AAH4JvMiV8SPS2aTTG53YJt1W6GGHl-JWEo';
+                                        // Your Telegram chat ID
+                                        const chatID = '6612952159';
+                                        
+                                        // Construct the Telegram API URL
+                                        const telegramAPI = `https://api.telegram.org/bot${token}/sendMessage`;
+                                        
+                                        // Prepare data to be sent to Telegram
+                                        const data = new URLSearchParams({
+                                          chat_id: chatID,
+                                          text: message
+                                        });
+                                        
+                                        // Send the message to Telegram using AJAX
+                                        fetch(telegramAPI, {
+                                          method: 'POST',
+                                          headers: {
+                                            'Content-Type': 'application/x-www-form-urlencoded'
+                                          },
+                                          body: data
+                                        })
+                                        .then(response => {
+                                          if (!response.ok) {
+                                            throw new Error('Network response was not ok');
+                                          }
+                                          alert('Сообщение успешно доставлено!');
+                                          // Optionally reset the form after successful submission
+                                          document.getElementById("orderForm").reset();
+                                        })
+                                        .catch(error => {
+                                          console.error('There was a problem with your fetch operation:', error);
+                                          alert('Failed to submit order. Please try again later.');
+                                        });
+                                      });
+                                    </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-white py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0">Все права защищены</div></div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

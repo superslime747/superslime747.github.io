@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Eremeev Bogdan</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/1.ico" />
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
+    </head>
+    <body class="d-flex flex-column h-100 bg-light">
+        <style>
+            body{
+                font-family: "LXGW WenKai Mono TC", monospace;
+                font-weight: 400;
+                font-style: normal;
+            }
+        </style>
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-light">Портфолио</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Домой</a></li>
+                            <li class="nav-item"><a class="nav-link" href="resume.html">Резюме</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html">Проекты</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Связаться</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Projects Section-->
+            <section class="py-5" style="background-color: black;">
+                <div class="container px-5 mb-5">
+                    <div class="text-center mb-5">
+                        <h1 class="display-5 fw-bolder mb-0"><span class="text-light d-inline">Проекты</span></h1>
+                    </div>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-11 col-xl-9 col-xxl-8">
+                            <!-- Project Card 1-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                    <div class="d-flex flex-column flex-md-row align-items-center">
+                                        <div class="p-5">
+                                            <h2 class="fw-bolder">Нейросеть для описания изображений</h2>
+                                            <p>В основе нейронной сети используется модель <a style="color: white;" href="https://huggingface.co/nlpconnect/vit-gpt2-image-captioning" target="_blank">vit-gpt2-image-captioning.</a></p>
+                                            <p>Высокая скорость обработки изображений достигается благодаря библиотеке torch.</p>
+                                            <p><a style="color: white;" href="https://colab.research.google.com/drive/1dPbGFN6GFmtUFCB3-w6bBSH0L6aKnWwL?usp=sharing" target="_blank">Блокнот с кодом </a>проекта в открытом доступе.</p>
+                                        </div>
+                                        <img class="img-fluid" src="img/p1.png" alt="..." />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project Card 2-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                    <div class="d-flex flex-column flex-md-row align-items-center">
+                                        <div class="p-5">
+                                            <h2 class="fw-bolder">Бот для предсказания стоимости активов</h2>
+                                            <p>Данная нейронная сеть используется для предсказания временных рядов, в часности для предсказания будующей цены актива <a style="color: white;" href="https://www.finam.ru/quote/commodities6/bz/export/" target="_blank"> Brent Crude Oil.</a></p>
+                                            <p>Нейронная сеть создана с помощью API <a style="color: white;" href="https://keras.io/api/" target="_blank">Keras</a> в <a style="color: white;" href="https://www.tensorflow.org/?hl=ru" target="_blank">TensorFlow</a>, интерфейс для взаимодествия пользавателя с моделью реализован в телеграмм боте.</p>
+                                            <p><a style="color: white;" href="https://colab.research.google.com/drive/1kEp3-r_2_vLKg3YJeibq7fcBJ4lHfgnU?usp=sharing" target="_blank"> Блокнот с кодом </a>проекта в открытом доступе.</p>
+                                        </div>
+                                        <img class="img-fluid" src="img/p2.png" alt="..." />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project Card 3-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                    <div class="d-flex flex-column flex-md-row align-items-center">
+                                        <div class="p-5">
+                                            <h2 class="fw-bolder">Парсер</h2>
+                                            <p>Был написан парсер, который парсерит сайт колледжа и достаёт от туда статьи, которые были выложены на данный сайт.</p>
+                                            <p><a style="color: white;" href="https://colab.research.google.com/drive/182dsmqs0-XMgLuVqCnXYWPpbgLhInn0s?usp=sharing" target="_blank"> Блокнот с кодом </a>проекта в открытом доступе.</p>
+                                        </div>
+                                        <img class="img-fluid" src="img/p3.png" alt="..." />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project Card 4-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0">
+                                <div class="card-body p-0">
+                                    <div class="d-flex flex-column flex-md-row align-items-center">
+                                        <div class="p-5">
+                                            <h2 class="fw-bolder">Бот для генерации изображений</h2>
+                                            <p>В основе нейронной сети используется модель <a style="color: white;" href="https://huggingface.co/dataautogpt3/OpenDalleV1.1" target="_blank">OpenDalleV1.1</a>, интерфейс для взаимодествия пользавателя с моделью реализован в телеграмм боте.</p>
+                                            <p><a style="color: white;" href="https://colab.research.google.com/drive/1VUp1uDSa6rZmBonJs8v3GwXnwfE6w7bG?usp=sharing" target="_blank"> Блокнот с кодом </a>проекта в открытом доступе.</p>
+                                        </div>
+                                        <img class="img-fluid" src="img/p4.png" alt="..." />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Call to action section-->
+            <section class="py-5 bg-black text-white">
+                <div class="container px-5 my-5">
+                    <div class="text-center">
+                        <h2 class="display-4 fw-bolder mb-4">Давайте построим что-нибудь вместе</h2>
+                        <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Связаться со мной</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-white py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0">Все права защищены</div></div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
